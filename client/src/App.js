@@ -25,13 +25,16 @@ function App() {
   return (
     <DataProvider>
       <BrowserRouter>
+        <Header />  {/* To be deleted */}
         <div style={{marginTop: 64}}>
           <Routes>
             <Route path='/login' element={<Login isUserAuthenticated={isUserAuthenticated} />} />
             
-            <Route path='/' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
+            <Route path='/' element={<Home />} /> {/* To be deleted */}
+
+            {/* <Route path='/' element={<PrivateRoute isAuthenticated={isAuthenticated} />} >
               <Route path='/' element={<Home />} />
-            </Route>
+            </Route> */}
 
           </Routes>
         </div>
